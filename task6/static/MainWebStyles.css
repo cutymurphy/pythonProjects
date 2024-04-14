@@ -1,0 +1,109 @@
+:root {
+    --main-border-color: rgb(169, 0, 0);
+    --system-border-color: gainsboro;
+    --main-bg-color: rgba(255, 187, 187, 0.2);
+}
+
+html {
+    background-color: rgba(255, 187, 187, 0.1);
+}
+
+body {
+    margin: 0;
+}
+
+.web-wrapper {
+    font-size: 25px;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.main-text {
+    color: var(--main-border-color);
+    font-size: 35px;
+    font-weight: bold;
+    margin: 40px 0 40px 20px;
+}
+
+.main-form {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+    height: 150px;
+    justify-content: space-around;
+    margin-bottom: 30px;
+}
+
+.input-wrapper input {
+    width: 300px;
+    margin-right: 20px;
+    padding: 10px;
+    border: 1px solid var(--system-border-color);
+}
+
+.input-wrapper input:focus {
+    outline: 1px solid var(--main-border-color);
+}
+
+.input-wrapper input:not(:placeholder-shown) {
+    font-weight: bold;
+    color: var(--main-border-color);
+}
+
+.input-wrapper button {
+    background: white;
+    border: 1px solid var(--system-border-color);
+    padding: 10px;
+    font-weight: bold;
+}
+
+.input-wrapper button:hover {
+    background-color: var(--main-bg-color);
+    cursor: pointer;
+}
+
+.input-wrapper button:active {
+    background-color: var(--main-border-color);
+    cursor: grabbing;
+}
+
+.input-wrapper input, button {
+    font-size: 30px;
+}
+
+.operator,
+.region,
+.inn {
+    padding: 5px 20px;
+    margin: 0 0 30px 0;
+    background-color: var(--main-bg-color);
+    display: flex;
+    flex-direction: row;
+}
+
+.main-info {
+    margin-left: 20px;
+    font-weight: bold;
+    width: 75%;
+}
+
+.title-info {
+    width: 25%;
+}
+
+.error-message {
+    width: 350px;
+    
+    font-size: 24px;
+    color: var(--main-border-color);
+    
+
+    margin-left: 20px;
+    margin-right: 50px;
+}

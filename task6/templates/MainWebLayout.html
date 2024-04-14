@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Telephones</title>
+    <link rel="stylesheet" href="../static/MainWebStyles.css">
+</head>
+
+<body>
+    <div class="web-wrapper">
+        <div class="main-text">
+            Поиск сотового оператора РФ по номеру телефона 📞
+        </div>
+        <div class="wrapper">
+            <div class="main-form">
+                <div class="input-text">Введите ваш номер телефона в формате 89*********</div>
+                <form action="" method="post" class="input-wrapper">
+                    <input name="input" class="telephone-input" type="text" placeholder="89518654777"
+                        value="{{number}}">
+                    <button type="submit">Найти информацию по номеру</button>
+                </form>
+            </div>
+            <div class="error-message">{{error}}</div>
+        </div>
+        <div class="info-form">
+            <div class="operator">
+                <div class="title-info">Ваш оператор:</div>
+                <div class="main-info">{{operator}}</div>
+            </div>
+            <div class="region">
+                <div class="title-info">Регион вашего оператора:</div>
+                <div class="main-info">{{region}}</div>
+            </div>
+            <div class="inn">
+                <div class="title-info">ИНН вашего оператора:</div>
+                <div class="main-info">{{inn}}</div>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>
