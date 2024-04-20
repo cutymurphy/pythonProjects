@@ -134,3 +134,6 @@ arr = [[1, 2, 3, 4], [1, 2, 3, 4]]
 print(arr)
 task5.Logic.Logicshift_col_up()
 print([list(c) for c in zip(*arr)][0])
+
+numbers = [i for i in range(1, 34)]
+print(numbers)

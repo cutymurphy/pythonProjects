@@ -4,6 +4,7 @@ from Logics import find_information
 
 app = Flask(__name__)
 
+
 @app.route("/")
 def index():
     return render_template("MainWebLayout.html")
@@ -46,8 +47,8 @@ def info():
         else:
             error = 'Неправильно введен номер телефона. Попробуйте еще раз.'
 
-    return render_template('MainWebLayout.html', number = phone_number, operator = operator, region = region, inn = inn, error = error)
-
+    return render_template('MainWebLayout.html', number=phone_number, operator=operator, region=region, inn=inn,
+                           error=error)
 
 
 if __name__ == "__main__":
