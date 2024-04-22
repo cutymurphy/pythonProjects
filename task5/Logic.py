@@ -19,16 +19,16 @@ class Logic:
 
     @staticmethod
     def shift_col_down(array, col_index):
-        t = array[3][col_index]
-        array[3][col_index] = array[2][col_index]
-        array[2][col_index] = array[1][col_index]
-        array[1][col_index] = array[0][col_index]
-        array[0][col_index] = t
+        zipped_rows = zip(*array)
+        transposed_matrix = [list(row) for row in zipped_rows]
+        Logic.shift_row_right(transposed_matrix, col_index)
+        unzipped_rows = zip(*transposed_matrix)
+        array[:] = [list(row) for row in unzipped_rows]
 
     @staticmethod
     def shift_col_up(array, col_index):
-        t = array[0][col_index]
-        array[0][col_index] = array[1][col_index]
-        array[1][col_index] = array[2][col_index]
-        array[2][col_index] = array[3][col_index]
-        array[3][col_index] = t
+        zipped_rows = zip(*array)
+        transposed_matrix = [list(row) for row in zipped_rows]
+        Logic.shift_row_left(transposed_matrix, col_index)
+        unzipped_rows = zip(*transposed_matrix)
+        array[:] = [list(row) for row in unzipped_rows]
